@@ -1,0 +1,327 @@
+* {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  min-width: 260px;
+  font-size: 62.5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:  sans-serif;
+  min-height: 50rem;
+}
+
+/* GLOBAL */
+h1,
+h2 {
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 6.5rem;
+  letter-spacing: 1.2rem;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 3.5rem;
+    letter-spacing: 0.4rem;
+  }
+}
+
+h2 {
+  font-size: 4.5rem;
+}
+
+@media (max-width: 600px) {
+  h2 {
+    font-size: 3.5rem;
+  }
+}
+
+.btn {
+  font-size: 1.7rem;
+}
+
+.section {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow-y: auto;
+  padding-top: 5rem;
+}
+
+.section-heading {
+  text-align: center;
+}
+
+.section-heading::after {
+  display: block;
+  content: ' ';
+  width: 20rem;
+  height: 2px;
+  margin: 0 auto;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  background-color: var(--black);
+}
+
+/* NAVBAR */
+.navbar {
+  padding: 0 !important;
+}
+
+.nav-link {
+  font-size: 2rem;
+  color:#222f3e ;
+  padding: 1.2rem 2.4rem;
+  border-bottom: 3px solid transparent;
+}
+
+@media (max-width: 600px) {
+  .nav-link {
+    font-size: 1.8rem;
+    padding: 1.2rem 1rem;
+  }
+}
+
+.nav-link:hover {
+  color: var(--black);
+  border-bottom: 3px solid var(--black);
+}
+
+/* WELCOME SECTION */
+.welcome-section {
+  background: linear-gradient(#222f3e, #576574);
+}
+
+.welcome-section__text-box--sub {
+  font-size: 3.2rem;
+  font-weight: 300;
+}
+
+@media (max-width: 400px) {
+  .welcome-section__text-box--sub {
+    font-size: 2.5rem;
+  }
+}
+
+/* PROJECTS SECTION */
+.projects-section {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 992px) {
+  .projects-section {
+    padding-top: 10rem;
+    height: auto;
+  }
+}
+
+.projects-section .section-heading {
+  color: #222f3e;
+}
+
+.grid {
+  margin-bottom: 5rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+@media (max-width: 992px) {
+  .grid {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.card {
+  font-size: 1.8rem;
+  width: 28%;
+  max-width: 40rem;
+  background-color: #c8d6e5;
+ }
+
+@media (max-width: 992px) {
+  .card {
+    width: 45%;
+  }
+  .card.project-tile {
+    margin-bottom: 5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 70%;
+  }
+}
+
+@media (max-width: 400px) {
+  .card {
+    width: 85%;
+  }
+}
+
+.card-header {
+  font-size: 2.5rem;
+}
+
+.card-img {
+  border-bottom: 1px solid var(--black);
+}
+
+.card-body {
+  padding: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card-title {
+  font-size: 2rem;
+  border-bottom: 1px solid var(--black);
+}
+
+.card .technologies {
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.card .technologies .technology__item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3rem 1fr;
+      grid-template-columns: 3rem 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card .technologies .technology__item:not(:last-child) {
+  margin-bottom: 1.3rem;
+}
+
+.card .technologies .technology__icon {
+  color: var(--black);
+  font-size: 2.5rem;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.card-btn {
+  justify-self: flex-end;
+}
+
+/* CONTACT */
+.contact-section {
+  background: linear-gradient(#576574,#8395a7);
+}
+
+.contact-section .section-heading {
+  color: #c8d6e5;
+}
+
+.contact-section .contact-options {
+  max-width: 60rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0;
+  list-style: none;
+}
+
+@media (max-width: 600px) {
+  .contact-section .contact-options {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.contact-section .contact-option:not(:last-child) {
+  margin-right: 2.5rem;
+}
+
+@media (max-width: 600px) {
+  .contact-section .contact-option:not(:last-child) {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.contact-section .contact-option__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2.4rem;
+  color: #c8d6e5;
+  text-shadow: 2px 2px 1px #c8d6e5;
+  text-decoration: none;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+}
+
+.contact-section .contact-option__link:hover {
+  color: #eee;
+  -webkit-transform: translateY(0.8rem);
+          transform: translateY(0.8rem);
+}
+
+.contact-section .contact-option__icon {
+  font-size: 3.2rem;
+  margin-right: 0.5rem;
+}
